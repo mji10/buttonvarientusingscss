@@ -13,7 +13,7 @@ $color-secondary:white;
 %exampleBtn {
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
     text-decoration: none;
     text-align: center;
@@ -26,7 +26,6 @@ $color-secondary:white;
 
 
     &-primary{
-        // min-width: 234px;
         color: $color-secondary;
         background-color: $color-primary;
         border-color: $color-primary;

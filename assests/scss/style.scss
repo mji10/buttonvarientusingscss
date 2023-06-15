@@ -1,0 +1,86 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    flex-direction: row;
+}
+
+// Button variants
+$color-primary:black;
+$color-secondary:white;
+
+%exampleBtn {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+.btn {
+    @extend %exampleBtn;
+
+
+    &-primary{
+        // min-width: 234px;
+        color: $color-secondary;
+        background-color: $color-primary;
+        border-color: $color-primary;
+        border: 2px solid $color-primary;
+
+        &:hover {
+            color: $color-primary;
+            background: $color-secondary;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+
+    &-secondary{
+        color: $color-primary;
+        background-color: $color-secondary;
+        border: 2px solid $color-primary;
+
+        &:hover{
+            color: $color-secondary;
+            background-color:$color-primary;
+        }
+    }
+
+    &-lg{
+       min-width: 234px;
+       height:60px;
+       padding:20px 32px;
+       line-height: 1;
+    }
+
+    &-sm{
+        min-width:156px;
+        height: 40px;
+        padding: 20px;
+        line-height: 0;
+    }
+
+    &-tertiary{
+        color:$color-primary;
+        text-decoration:underline;
+        background-color: transparent;
+        border: 0;
+
+        &:after{
+            display: inline-block;
+    margin-left: 15px;
+    content: "➞";
+    transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+            &::after {
+                transform: translateX(7px);
+            }
+        }
+    }
+}
